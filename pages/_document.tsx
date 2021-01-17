@@ -8,6 +8,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { patchSharing } from '@module-federation/nextjs-mf';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -37,7 +38,8 @@ export default class MyDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html lang="pt">
+      <Html lang="en">
+        {patchSharing()}
         <Head>
           <meta charSet="utf-8" />
         </Head>

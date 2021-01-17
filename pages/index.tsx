@@ -13,7 +13,7 @@ const IndexPage: NextPage = () => {
       <GlobalStyle />
       <main>
         <h1>
-          Welcome to <a href="https://nextjs.org">Next.js TypeScript!</a>
+          Welcome to <a href="https://nextjs.org">Next.js TypeScript @dev-to Articles!</a>
         </h1>
       </main>
       <Footer />
