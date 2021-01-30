@@ -6,14 +6,14 @@ const path = require("path");
 
 module.exports = {
   webpack: (config, options) => {
-    const { buildId, dev, isServer, defaultLoaders, webpack } = options;
+    const { isServer } = options;
     const microfrontendConfig = {
       name: "collections",
       library: { type: config.output.libraryTarget, name: "collections" },
       filename: "static/runtime/remoteEntry.js",
       remotes: {},
       exposes: {
-        './Articles': './src/views/Articles'
+        './Articles': './src/application/views/Articles'
       },
       shared: [],
     };
@@ -27,6 +27,11 @@ module.exports = {
       config.output.publicPath = "http://localhost:3010/_next/";
     }
 
+    return config;
+  },
+  webpackDevMiddleware: (config) => {
+    // Perform customizations to webpack dev middleware config
+    // Important: return the modified config
     return config;
   },
 };
