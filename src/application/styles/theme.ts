@@ -19,9 +19,15 @@ export default {
   },
   colors: {
     body: '#e8e8e8',
-    primary: '#2d3748',
+    primary: '#001228',
     secondary: '#e2e8f0',
     third: '#1a202c',
     fourth: '#0b2239',
+    white: '#fff',
+    black: '#000f20',
+    gray: '#9c9c9c',
+    grayLight: '#e8e8e8',
+    grayMedium: '#6d7681',
+    blue: '#0f5fa3',
   },
 };

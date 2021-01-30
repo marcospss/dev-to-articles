@@ -40,9 +40,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         {patchSharing()}
-        <Head>
-          <meta charSet="utf-8" />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
