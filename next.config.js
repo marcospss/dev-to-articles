@@ -1,19 +1,15 @@
-const {
-  withModuleFederation,
-  MergeRuntime,
-} = require("@module-federation/nextjs-mf");
-const path = require("path");
+const { withModuleFederation, MergeRuntime } = require('@module-federation/nextjs-mf');
 
 module.exports = {
   webpack: (config, options) => {
     const { isServer } = options;
     const microfrontendConfig = {
-      name: "collections",
-      library: { type: config.output.libraryTarget, name: "collections" },
-      filename: "static/runtime/remoteEntry.js",
+      name: 'collections',
+      library: { type: config.output.libraryTarget, name: 'collections' },
+      filename: 'static/runtime/remoteEntry.js',
       remotes: {},
       exposes: {
-        './Articles': './src/application/views/Articles'
+        './Articles': './src/application/views/Articles',
       },
       shared: [],
     };
@@ -24,7 +20,7 @@ module.exports = {
     config.plugins.push(new MergeRuntime());
 
     if (!isServer) {
-      config.output.publicPath = "http://localhost:3010/_next/";
+      config.output.publicPath = 'http://localhost:3010/_next/';
     }
 
     return config;
