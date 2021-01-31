@@ -32,7 +32,7 @@ const CardTitleDescription = ({
       ) : null} */}
       <Header>
         <h1>
-          <Link href={`/${user.username}/${slug}`} as={`/${user.username}/${slug}`}>
+          <Link href={`/[username]/[slug]`} as={`/${user.username}/${slug}`}>
             {title}
           </Link>
         </h1>

@@ -1,14 +1,10 @@
 import { NextPage } from 'next';
-
-import Head from '~/infrastructure/components/Head';
-
+import HeadNext from '~/infrastructure/components/Head';
 const IndexPage: NextPage = () => {
   return (
     <>
-      <Head title="Articles" />
-      <main>
-        <h1>Welcome to Next.js TypeScript @dev-to Articles!</h1>
-      </main>
+      <HeadNext title="Home" />
+      <h1>Article</h1>
     </>
   );
 };

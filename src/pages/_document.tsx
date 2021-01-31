@@ -40,7 +40,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         {patchSharing()}
-        <Head />
+        <Head>
+          <link rel="dns-prefetch" href="https://dev.to/" />
+          <link rel="preconnect" href="https://dev.to/" />
+        </Head>
         <body>
           <Main />
           <NextScript />
